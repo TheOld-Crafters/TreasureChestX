@@ -337,6 +337,14 @@ public class GroupCommand extends SimpleCommand {
 				throw new CommandException("Failed to load treasure (for change) at " + locTmp.toString());
 			}
 			chestTmp.getContainer().setContents(tchest.getContainer().getContents());
+			chestTmp.setForgetTime(tchest.getForgetTime());
+			chestTmp.setRewards(tchest.getRewards());
+			chestTmp.setMessage(ITreasureChest.Message.FOUND, tchest.getMessage(ITreasureChest.Message.FOUND));
+			chestTmp.setMessage(ITreasureChest.Message.FOUND_ALREADY, tchest.getMessage(ITreasureChest.Message.FOUND_ALREADY));
+			chestTmp.setMessage(ITreasureChest.Message.UNLIMITED, tchest.getMessage(ITreasureChest.Message.UNLIMITED));
+			chestTmp.setUnlimited(tchest.isUnlimited());
+			chestTmp.setShared(tchest.isShared());
+			chestTmp.ignoreProtection(tchest.ignoreProtection());
 			manager.setTreasure(chestTmp);
 		}
 		sender.sendMessage(ChatColor.GOLD + "Treasure(s) in group " + name + " have been copied.");

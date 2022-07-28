@@ -61,7 +61,7 @@ public class CommandRewardFactory extends RewardFactory {
 			
 			@Override
 			public String getPromptText(ConversationContext context) {
-				return ChatColor.GOLD + "> Type the command, start with a forward-slash (/):";
+				return ChatColor.GOLD + "> Type the command. Use %player% and start without a forward-slash (/):";
 			}
 			
 			@Override

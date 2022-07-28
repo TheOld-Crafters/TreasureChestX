@@ -551,7 +551,7 @@ public class TreasureChestCommand extends SimpleCommand {
 		manager.setTreasure(tchest);
 	}
 
-	@Command(aliases = { "setmsg", "setmessage" }, args = "<number> <message>", desc = "Set messages", help = { "Specify a message number, and the message text.", "Valid message numbers are: ", "1: found", "2: already found", "3: unlimited" })
+	@Command(aliases = { "setmsg", "setmessage" }, args = "<number> <message>", desc = "Set messages", help = { "Specify a message number, and the message text.", "Valid message numbers are: ", "1: found", "2: already found (you can use %time%)", "3: unlimited" })
 	public void setmessage(CommandSender sender, String[] args) throws CommandException {
 	
 		if(!(sender instanceof Player)) {
@@ -618,7 +618,7 @@ public class TreasureChestCommand extends SimpleCommand {
 			
 			sender.sendMessage(ChatColor.RED + "Correct message numbers are:");
 			sender.sendMessage("1" + ChatColor.GRAY + " found for the first time");
-			sender.sendMessage("2" + ChatColor.GRAY + " already found");
+			sender.sendMessage("2" + ChatColor.GRAY + " already found (can use " + ChatColor.YELLOW + "%time%" + ChatColor.GRAY + " in the msg)");
 			sender.sendMessage("3" + ChatColor.GRAY + " is unlimited");
 			throw new CommandException("Incorrect message number: '" + msgId + "'.");
 		}

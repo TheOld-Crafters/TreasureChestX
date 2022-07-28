@@ -1,5 +1,5 @@
 name: TreasureChestX
-author: jascotty2, Mtihc, HenrikoMagnifico
+author: jascotty2, Mtihc, HenrikoMagnifico, poma123
 description: Place chest that adds some items everytime someone opens it for the first time.
 main: com.mtihc.minecraft.treasurechest.v8.plugin.TreasureChestPlugin
 startup: postworld

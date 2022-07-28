@@ -4,7 +4,6 @@
     <groupId>com.mtihc.minecraft.treasurechest.v8.plugin</groupId>
     <artifactId>TreasureChest</artifactId>
     <version>8.5</version>
-    <name>TreasureChest</name>
     <url>http://dev.bukkit.org/server-mods/treasurechest/</url>
     <repositories>
         <repository>

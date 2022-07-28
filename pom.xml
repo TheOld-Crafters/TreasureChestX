@@ -16,11 +16,11 @@
         </repository>
         <repository>
             <id>sk89q-repo</id>
-            <url>http://maven.enginehub.org/repo/</url>
+            <url>https://maven.enginehub.org/repo/</url>
         </repository>
         <repository>
             <id>milkbowl-repo</id>
-            <url>http://nexus.hc.to/content/repositories/pub_releases</url>
+            <url>https://nexus.hc.to/content/repositories/pub_releases</url>
         </repository>
     </repositories>
     <build>

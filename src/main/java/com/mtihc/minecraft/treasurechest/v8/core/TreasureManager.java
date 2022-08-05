@@ -298,7 +298,7 @@ public class TreasureManager extends TreasureDataFacade {
 			
 			String message = tchest.getMessage(TreasureChest.Message.UNLIMITED);
 			if(message != null) {
-				player.sendMessage(ChatColor.GOLD + message);
+				player.sendMessage(ChatColor.GOLD + ChatColor.translateAlternateColorCodes('&', message));
 			}
 		}
 		//
@@ -323,10 +323,9 @@ public class TreasureManager extends TreasureDataFacade {
 				if (alreadyFoundMessage != null) {
 					if (alreadyFoundMessage.contains("%time%")) {
 						String forgetStr = getTimeForgetString(whenToForgot(time, tchest.getForgetTime()), "n", "ó", "p", "mp");
-						player.sendMessage(ChatColor.GOLD + alreadyFoundMessage.replace("%time%", forgetStr));
-					} else {
-						player.sendMessage(ChatColor.GOLD + alreadyFoundMessage);
+						alreadyFoundMessage = alreadyFoundMessage.replace("%time%", forgetStr);
 					}
+					player.sendMessage(ChatColor.GOLD + ChatColor.translateAlternateColorCodes('&', alreadyFoundMessage));
 				}
 				
 			}
@@ -348,7 +347,7 @@ public class TreasureManager extends TreasureDataFacade {
 				
 				String foundMessage = tchest.getMessage(TreasureChest.Message.FOUND);
 				if(foundMessage != null) {
-					player.sendMessage(ChatColor.GOLD + foundMessage);
+					player.sendMessage(ChatColor.GOLD + ChatColor.translateAlternateColorCodes('&', foundMessage));
 				}
 				
 			}
@@ -370,7 +369,7 @@ public class TreasureManager extends TreasureDataFacade {
 
 				String foundMessage = tchest.getMessage(TreasureChest.Message.FOUND);
 				if(foundMessage != null) {
-					player.sendMessage(ChatColor.GOLD + foundMessage);
+					player.sendMessage(ChatColor.GOLD + ChatColor.translateAlternateColorCodes('&', foundMessage));
 				}
 			}
 		}
